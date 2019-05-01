@@ -112,6 +112,8 @@ RUN set -x \
 
 COPY auto-reload-nginx.sh /home/auto-reload-nginx.sh
 RUN chmod +x /home/auto-reload-nginx.sh
+RUN chmod 777 /var/cache/nginx/
+RUN chmod 777 /var/run/
 
 	# install inotify
 RUN apk update && apk add  inotify-tools
