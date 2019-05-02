@@ -121,5 +121,5 @@ RUN apk update && apk add  inotify-tools
 EXPOSE 80
 
 STOPSIGNAL SIGTERM
-
+USER 101
 CMD ["nginx", "-g", "daemon off;"]
